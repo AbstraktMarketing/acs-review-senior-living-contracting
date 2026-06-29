@@ -272,6 +272,98 @@
   }
   .svc-card a:hover { text-decoration: underline; }
 
+  /* ── DECK SECTION ── */
+  .deck-section {
+    padding: 80px 0;
+    background: var(--navy);
+    color: #fff;
+  }
+  .deck-inner {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 64px;
+    align-items: center;
+  }
+  .deck-copy h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(22px, 2.8vw, 34px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .deck-copy p {
+    color: rgba(255,255,255,0.72);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .deck-list {
+    list-style: none;
+    margin: 20px 0 24px;
+  }
+  .deck-list li {
+    color: rgba(255,255,255,0.82);
+    font-size: 14.5px;
+    padding: 8px 0 8px 22px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    line-height: 1.5;
+  }
+  .deck-list li:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+  .deck-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .deck-closer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    margin-bottom: 28px !important;
+  }
+  .deck-stat-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .deck-stat {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .dstat-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .dstat-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  @media (max-width: 768px) {
+    .deck-inner { grid-template-columns: 1fr; gap: 36px; }
+    .deck-stat-stack { flex-direction: row; }
+    .deck-stat { flex: 1; padding: 20px 12px; }
+    .dstat-num { font-size: 24px; }
+  }
+
   /* ── GALLERY SECTION ── */
   .gallery-section {
     padding: 80px 0;
@@ -642,6 +734,45 @@
         <div>
           <h3>General Interior &amp; Exterior Contracting</h3>
           <p>Painting, flooring, drywall, exterior repairs, and facility maintenance programs — one licensed contractor for the full scope of your facility's needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DECK SECTION -->
+<section class="deck-section">
+  <div class="container">
+    <div class="deck-inner">
+      <div class="deck-copy">
+        <span class="section-label">Outdoor Spaces</span>
+        <h2>Deck &amp; Outdoor Space Renovation for Senior Living Facilities</h2>
+        <p>Outdoor spaces are a quality-of-life priority for senior living residents, and they require a contractor who understands the complexity of building inside an active community.</p>
+        <p>ACS builds and renovates decks, patios, and outdoor common areas that meet ADA requirements, pass facility inspections, and get done without disrupting daily resident life.</p>
+        <ul class="deck-list">
+          <li>New deck construction and full deck replacements</li>
+          <li>Patio resurfacing and repairs</li>
+          <li>ADA-compliant railings, ramps, and accessible entryways</li>
+          <li>Courtyard and outdoor common area refreshes</li>
+          <li>Ongoing maintenance programs for outdoor structures</li>
+        </ul>
+        <p class="deck-closer">Licensed. Insured. Built around your residents' schedule.</p>
+        <a href="#contact" class="btn btn-gold">Request a Consultation</a>
+      </div>
+      <div class="deck-visual">
+        <div class="deck-stat-stack">
+          <div class="deck-stat">
+            <div class="dstat-num">ADA</div>
+            <div class="dstat-label">Compliant Builds</div>
+          </div>
+          <div class="deck-stat">
+            <div class="dstat-num">20+</div>
+            <div class="dstat-label">Years Outdoor Experience</div>
+          </div>
+          <div class="deck-stat">
+            <div class="dstat-num">Zero</div>
+            <div class="dstat-label">Disruption Policy</div>
+          </div>
         </div>
       </div>
     </div>
